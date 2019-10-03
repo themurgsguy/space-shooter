@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://sprites/player1.png" type="Texture" id=1]
-[ext_resource path="res://sprites/player2.png" type="Texture" id=2]
+[ext_resource path="res://sprites/asteroid1.png" type="Texture" id=1]
+[ext_resource path="res://sprites/asteroid2.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 6.0
@@ -11,11 +11,11 @@ animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "default",
-"speed": 5.0
+"speed": 3.0
 } ]
 
-[node name="Player" type="Area2D" groups=[
-"player",
+[node name="Asteroid" type="Area2D" groups=[
+"asteroid",
 ]]
 
 [node name="HitZone" type="CollisionShape2D" parent="."]
@@ -25,8 +25,4 @@ shape = SubResource( 1 )
 frames = SubResource( 2 )
 frame = 1
 playing = true
-
-[node name="ReloadTimer" type="Timer" parent="."]
-wait_time = 0.2
-one_shot = true
 
