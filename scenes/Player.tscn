@@ -32,3 +32,4 @@ playing = true
 wait_time = 0.2
 one_shot = true
 
+[connection signal="timeout" from="ReloadTimer" to="." method="_on_ReloadTimer_timeout"]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://sprites/background.png" type="Texture" id=1]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://fonts/hour5.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://scenes/Asteroid.tscn" type="PackedScene" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 3 )
@@ -48,4 +49,13 @@ text = "game over
 -press the enter key to return-"
 align = 1
 uppercase = true
+
+[node name="Asteroid" parent="." instance=ExtResource( 4 )]
+position = Vector2( 179.753, 46.1313 )
+
+[node name="Asteroid2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 241.593, 128.054 )
+
+[node name="Asteroid3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 303.035, 62.6352 )
 
