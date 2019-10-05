@@ -21,9 +21,12 @@ func _input(event):
 
 
 func _on_SpawnTimer_timeout():
+	get_node("SpawnTimer").wait_time *= 0.99
+	
 	var asteroid_instance = asteroid_scene.instance()
-	asteroid_instance.position = Vector2(SCREEN_WIDTH + 8, rand_range(0, SCREEN_HEIGHT))
 	asteroid_instance.connect("score", self, "_on_Player_score")
+	asteroid_instance.position = Vector2(SCREEN_WIDTH + 8, rand_range(0, SCREEN_HEIGHT))
+	asteroid_instance.move_speed += score
 	add_child(asteroid_instance)
 
 
