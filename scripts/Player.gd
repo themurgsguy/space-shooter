@@ -25,15 +25,15 @@ func _process(delta):
 
 	position += (delta * MOVE_SPEED) * input_dir
 
-	if position.x < 0.0:
-		position.x = 0.0
-	elif position.x > SCREEN_WIDTH:
-		position.x = SCREEN_WIDTH
+	if position.x < 8.0:
+		position.x = 8.0
+	elif position.x > SCREEN_WIDTH - 8.0:
+		position.x = SCREEN_WIDTH - 8.0
 
-	if position.y < 0.0:
-		position.y = 0.0
-	elif position.y > SCREEN_HEIGHT:
-		position.y = SCREEN_HEIGHT
+	if position.y < 8.0:
+		position.y = 8.0
+	elif position.y > SCREEN_HEIGHT -8.0 :
+		position.y = SCREEN_HEIGHT -8.0
 
 	if Input.is_key_pressed(KEY_SPACE) and can_shoot:
 		can_shoot = false
